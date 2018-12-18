@@ -1,0 +1,7 @@
+C:\Users\dibbi\OneDrive\Documents\Visual Studio 2015\Projects\Assignment5\DAL\bin\Debug\DAL.dll
+C:\Users\dibbi\OneDrive\Documents\Visual Studio 2015\Projects\Assignment5\DAL\bin\Debug\DAL.pdb
+C:\Users\dibbi\OneDrive\Documents\Visual Studio 2015\Projects\Assignment5\DAL\bin\Debug\Model.dll
+C:\Users\dibbi\OneDrive\Documents\Visual Studio 2015\Projects\Assignment5\DAL\bin\Debug\Model.pdb
+C:\Users\dibbi\OneDrive\Documents\Visual Studio 2015\Projects\Assignment5\DAL\obj\Debug\MyDAL.csprojResolveAssemblyReference.cache
+C:\Users\dibbi\OneDrive\Documents\Visual Studio 2015\Projects\Assignment5\DAL\obj\Debug\DAL.dll
+C:\Users\dibbi\OneDrive\Documents\Visual Studio 2015\Projects\Assignment5\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,28 @@
+﻿@model List<Entities.ProductDTO>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "AdminViewProducts";
+}
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+@foreach (var product in Model)
+{
+    <div id="div1" class="col-md-3">
+        <form method="Post">
+            <div id="div2" class="product">
+                <div id="div3">
+                    <img src="~/UploadFile/@product.picURL" width='300px' height='300px' class='image' />
+                    <h5>Type: @product.typeName</h5>
+                    <h5>Price: @product.price</h5>
+                    <h5>Description: @product.description</h5>
+                    
+                    <h5>Updated On: @product.updatedOn</h5>
+                    <input type='hidden' name='hiddenid' value=@product.productId>
+                    <a href="~/Product/Delete/@product.productId" >Delete</a>
+                    <a href="~/Product/Edit/@product.productId">Edit</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    }

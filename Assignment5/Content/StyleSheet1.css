@@ -1,0 +1,26 @@
+﻿#div1,#div2,#div3 {
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.btn1 {
+    width: 90px;
+    border-radius: 5px;
+    height: 40px;
+    color: white;
+    background-color: red;
+    font-size: 15pt;
+}
+
+.btn2 {
+    width: 90px;
+    border-radius: 5px;
+    height: 40px;
+    color: white;
+    background-color: orange;
+    font-size: 15pt;
+}
+
+h5 {
+    font-size: 15pt;
+}

@@ -1,0 +1,35 @@
+﻿@model List<Entities.UserDTO>
+@{
+    ViewBag.Title = "UpdateProfile";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+@foreach (var obj in Model)
+{
+    <form action="/Home/UpdateUser" method="post" style="float: left;margin-left: 400px; width: 350px;height: 500px;background-color: goldenrod ;border-radius: 20px; padding: 10px; margin-top: 100px;">
+        <div class="form-group" style="background-color: LightSeaGreen;font-size: 20pt;">
+
+            <label style="margin-left: 20px; padding: 10px">Sign Up</label>
+        </div>
+        <div class="form-group" style="font-size: 15pt;">
+            <label>Name</label>
+            <input class="form-control" id="name" type="text" name="name" placeholder="Name...." value="@obj.name"><br>
+        </div>
+        <div class="form-group" style="font-size: 15pt;">
+            <label>Password</label>
+            <input class="form-control" id="password" type="password" name="password" placeholder="Password...." value="@obj.password">
+        </div>
+        <div class="form-group" style="font-size: 15pt;">
+            <label>Login</label>
+            <input class="form-control" id="login" type="text" name="login" placeholder="Login...." readonly value="@obj.login">
+        </div>
+        <div class="form-group" style="font-size: 15pt;">
+            <label>Picture</label><br>
+            <input type="file" name="picture">
+        </div>
+        <div style="margin-left: 110px">
+            <button type="Submit" id="btn" name="btnSubmit" class="btn btn-success btn-lg">Sign Up</button>
+        </div>
+        <input type="hidden" id="picname" name="picname" value="@obj.picURL" />
+    </form>
+}

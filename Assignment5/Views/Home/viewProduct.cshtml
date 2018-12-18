@@ -1,0 +1,23 @@
+﻿@model List<Entities.ProductDTO>
+@{
+    ViewBag.Title = "viewProduct";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+@foreach (var item in Model)
+{
+    <div id="div1" class="col-md-3">
+
+        <form method="Post">
+            <div id="div2" class="product">
+                <div id="div3">
+                    <img src="~/UploadFile/@item.picURL" width='290px' height='300px' class='image' />
+                    <h5>Type: @item.typeName</h5>
+                    <h5>Price: @item.price</h5>
+                    <h5>Description: @item.description</h5>
+                </div>
+            </div>
+        </form>
+    </div>
+}

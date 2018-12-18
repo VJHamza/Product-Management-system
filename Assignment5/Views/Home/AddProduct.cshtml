@@ -1,0 +1,42 @@
+﻿@model List< Entities.TypeDTO>
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+	<form method="post" action="/Home/SaveProduct"  enctype="multipart/form-data" style="float: left;margin-left: 500px; width: 370px;height: 600px;background-color: aqua ;border-radius: 20px; padding: 10px; margin-top: 100px;">
+		<div class="form-group" style="background-color: LightSeaGreen;font-size: 20pt;">
+			<label style="margin-left: 20px; padding: 10px; color: white;">Add PRODUCT</label>
+		</div>
+		<div class="form-group" style="font-size: 15pt;">
+			<label>Name</label>
+			<input class="form-control" type="text" name="name" placeholder="Name...."><br>
+		</div>
+		<div class="form-group" style="font-size: 15pt;">
+			<label>Price</label>
+			<input class="form-control" type="text" name="price" placeholder="Price...." >
+		</div>
+		<div class="form-group" style="font-size: 15pt;">
+			<label>Type Select</label>
+				<select class="form-control" name="type" >
+                    <option>--Select--</option>
+                    @foreach (var type in Model)
+                        {
+                            <option value="@type.typeId">@type.typeName</option>
+                        }
+                    
+                </select>
+		</div>
+		<div class="form-group" style="font-size: 15pt;">
+			<label>Description</label>
+			<textarea class="form-control" name="description" rows="1" cols="30" placeholder="Description"></textarea>
+		</div>
+		<div class="form-group" style="font-size: 15pt;">
+			<label>Picture</label><br>
+			<input type="file" name="picture">
+		</div>
+		<div style="margin-left: 110px">
+			<button type="Submit" name="btnEdit" class="btn btn-success btn-lg">Add Product</button>
+		</div>
+		<p><input type="hidden" name="id" value="<?=$product_id;?>"></p>
+	</form>
